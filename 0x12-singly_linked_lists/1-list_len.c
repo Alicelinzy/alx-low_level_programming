@@ -1,26 +1,21 @@
-#include <stdio.h>
-#include "lists.h" // Replace with the actual header file for list_t
+#include <stdlib.h>
+#include "lists.h"
 
-size_t print_list(const list_t *h) {
-    size_t count = 0; // Initialize a count variable to keep track of the number of nodes
+/**
+ * list_len - returns the number of elements in a linked list
+ * @m: pointer to the list_t list
+ *
+ * Return: number of elements in h
+ */
+size_t list_len(const list_t *m)
+{
+	size_t n = 0;
 
-    printf("["); // Print the opening bracket
-
-    while (h != NULL) {
-        if (h->str == NULL) {
-            printf("(nil)");
-        } else {
-            printf("%s", h->str);
-        }
-
-        count++; // Increment the count for each node
-        h = h->next; // Move to the next node
-
-        if (h != NULL) {
-            printf(", "); // Print a comma and space if there are more nodes
-        }
-    }
-
-    printf("]\n"); // Print the closing bracket and a newline
-    return count; // Return the number of nodes
+	while (m)
+	{
+		m++;
+		m = m->next;
+	}
+	return (n);
 }
+
