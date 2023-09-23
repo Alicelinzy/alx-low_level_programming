@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "your_list_t_header.h" // Replace with the actual header file for list_t
+#include "lists.h" // Replace with the actual header file for list_t
 
 size_t print_list(const list_t *h) {
     size_t count = 0; // Initialize a count variable to keep track of the number of nodes
